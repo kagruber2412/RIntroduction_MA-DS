@@ -1,5 +1,5 @@
 ---
-title: "Grammer of Graphics"
+title: "Grammar of Graphics"
 sidebar: toc
 category: getting-started
 order: 1
