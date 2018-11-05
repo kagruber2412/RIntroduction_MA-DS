@@ -34,6 +34,7 @@ chr <- c("a", "b", "c")           # character
 ```
 
 - Concatenating vectors
+
 ```{r}
 c(dbl,dbl)
 ```
@@ -117,12 +118,14 @@ If two vectors are of unequal length, the shorter vector will be **recycled** in
 ### Combinations
 
 - columnwise
+
 ```{r}
 m1 <- cbind(a, b)   # two columns
 m1
 ```
 
 - rowwise
+
 ```{r}
 m2 <- rbind(a, b)   # two rows
 m2
