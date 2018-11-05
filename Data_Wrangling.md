@@ -82,19 +82,22 @@ cereals$rating %>%      # forward the ratings into the function mean()
 - Extracting existing variables ("similar" to **subsetting**)
 
 ```{r}
-out <- cereals %>% select(calories,protein,fat,fiber,carbo,sugars)
+out <- cereals %>% 
+          select(calories,protein,fat,fiber,carbo,sugars)
 ```
 
 - Unselecting certain variables:
 
 ```{r}
-out <- cereals %>% select(-name,-mfr,-type,-sodium,-potass,-vitamins,-shelf,-weight,-cups,-rating)
+out <- cereals %>% 
+          select(-name,-mfr,-type,-sodium,-potass,-vitamins,-shelf,-weight,-cups,-rating)
 ```
 
 - Selecting a set of variables:
 
 ```{r}
-out <- cereals %>% select(calories:fat,fiber:sugars)
+out <- cereals %>% 
+           select(calories:fat,fiber:sugars)
 ```
 
 **Further options**
@@ -112,11 +115,13 @@ out <- cereals %>% select(calories:fat,fiber:sugars)
 - Extracting existing observations using "logicals":
 
 ```{r}
-sub.out <- cereals %>% filter(calories >= 100)
+sub.out <- cereals %>% 
+             filter(calories >= 100)
 ```
 
 ```{r}
-sub.out <- cereals %>% filter(calories >= 100, type == "H")
+sub.out <- cereals %>% 
+             filter(calories >= 100, type == "H")
 ```
 
 ### `mutate()`
@@ -124,7 +129,8 @@ sub.out <- cereals %>% filter(calories >= 100, type == "H")
 - Data transformation (deriving new variables from existing variables)
 
 ```{r}
-mutate.out <- cereals %>% mutate(CP = calories/cups) # calculate calories per cups
+mutate.out <- cereals %>% 
+                 mutate(CP = calories/cups) # calculate calories per cups
 head(mutate.out)
 ```
 
@@ -133,13 +139,15 @@ head(mutate.out)
 - The "ultimate" goal: Summarizing the data and obtaining summary tables:
 
 ```{r}
-cereals %>% summarise(Mean_calories = mean(calories))
+cereals %>% 
+    summarise(Mean_calories = mean(calories))
 ```
-```{r, comments=TRUE}
-cereals %>% summarise(Mean = mean(calories, na.rm=TRUE), # calculating the mean of calories
-                      Var = var(calories, na.rm=TRUE),   # calculating the variance of calories
-                      SD = sd(calories, na.rm=TRUE),     # calculating the standard deviation of calories
-                      N = n())                           # counting the number of observations
+```{r}
+cereals %>% 
+     summarise(Mean = mean(calories, na.rm=TRUE), # calculating the mean of calories
+               Var = var(calories, na.rm=TRUE),   # calculating the variance of calories
+               SD = sd(calories, na.rm=TRUE),     # calculating the standard deviation of calories
+               N = n())                           # counting the number of observations
 # note: na.rm indicates what to do with missing values (na.rm = TRUE states remove missing values)
 ```
 
@@ -168,7 +176,8 @@ library(tidyr)    # load the `tidyr` package into your current worksession
 * The `spread()` function generates multiple columns (makes "long" data wider)
 
 ```{r}
-data %>% spread(key, value, fill = NA, convert = FALSE)
+data %>% 
+   spread(key, value, fill = NA, convert = FALSE)
 ```
 
 * `data`: The data to be reformatted.
@@ -178,14 +187,14 @@ data %>% spread(key, value, fill = NA, convert = FALSE)
 * `convert`: Whether to fix incorrect data types as it goes.
 
 **Example: ** Bike sharing in Washington D.C.  
-```{r, comment=TRUE}
-# Read in the full daily bike sharing dataset
-day <- read.csv("day.csv")
+```{r}
+day <- read.csv("day.csv") # Read in the full daily bike sharing dataset
 head(day)
 ```
 
 ```{r}
-out <- day %>% spread(season, cnt)
+out <- day %>% 
+        spread(season, cnt)
 out
 ```
 
