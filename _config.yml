@@ -8,4 +8,4 @@ permalink: /:categories/
 header_pages:
   - A_Primer_on_R.md
   - Base_R.md
-  
+  - Data_wrangling.md
