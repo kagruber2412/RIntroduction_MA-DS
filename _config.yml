@@ -1,1 +1,9 @@
-theme: jekyll-theme-minimal
+author: Kathrin Gruber
+markdown: kramdown
+title: Introduction to R
+description: Workshop on Marketing Analytics and Data Science
+theme: minima
+permalink: /:categories/
+
+header_pages:
+  - A_Primer_on_R.md
