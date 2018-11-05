@@ -1,4 +1,11 @@
+---
+title: "Data wrangling"
+sidebar: toc
+category: getting-started
+order: 1
+---
 
+## I'm a cowboy!
 
 * 80% of data analysis is spent on the process of cleaning and preparing the data.
 * `dplyr` and `tidyr` "package" the data processing tasks.
