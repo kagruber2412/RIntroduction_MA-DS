@@ -1,3 +1,10 @@
+---
+title: "Grammer of Graphics"
+sidebar: toc
+category: getting-started
+order: 1
+---
+
 Graphs are forms of communication:
 
 - **Analysis**: describing data, detecting patterns and trends (default settings often give reasonable results)
