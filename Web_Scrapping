@@ -1,3 +1,10 @@
+---
+title: "Web Scraping"
+sidebar: toc
+category: getting-started
+order: 1
+---
+
 # What is Web Scraping?
   
 * Web scraping is a process of extracting **unstructured** data from websites into a **structured** format eligible to 
