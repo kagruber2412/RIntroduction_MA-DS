@@ -1,5 +1,6 @@
 ---
-title: "A Primer on R (and RStudio)"
+title: "A Primer on R"
+subtitle: "(and RStudio)"
 sidebar: toc
 category: getting-started
 order: 1
