@@ -50,27 +50,21 @@ dim(cereals)           # check the dimension (number of observations and number 
 library(dplyr)         # load the dplyr package into your current worksession          
 ```
 
-- Calculating the mean
-
+Calculating the mean
 ```{r}
 mean(cereals$rating)   # apply the function mean() on ratings
 ```
-
 is equal to
-
 ```{r}
 cereals$rating %>%     # forward the ratings into the function mean()
     mean()
 ```
 
-- `round()` the result of `mean()`
-
+`round()` the result of `mean()`
 ```{r}
 round(mean(cereals$rating),2)
 ```
-
 is equal to
-
 ```{r}
 cereals$rating %>%      # forward the ratings into the function mean()
     mean() %>%          # forward the result of the function mean() into the function round()
