@@ -34,11 +34,11 @@ boxplot(rating ~ mfr, data = cereals)    # Boxplot of rating vs. manufacturer
 
 ## Customizing standard graphs
 
-* Controlling graphic parameters: colors, point symbols, line styles, labels and titles.
+Controlling graphic parameters: colors, point symbols, line styles, labels and titles.
 
-Histogramm of rating
+* Histogramm of rating:
+  * changing bar colors and the title
 ```{r}
-# changing bar colors and the title
 hist(cereals$rating, col="gray", main = "Histogramm of cerals ratings")
 # changing x axis labels
 hist(cereals$rating, col="gray", main = "Histogramm of cerals ratings", xlab = "Rating")
