@@ -101,7 +101,7 @@ Scrape the number of reviews and the overall rating.
 ```{r}
 reviews <- daniels %>%                             # store the result in an object named reviews
   html_nodes(".seeAllReviews, .overallRating") %>% # key identifiers for no. of reviews and overall rating 
-  html_text()
+     html_text()
 reviews
 ```
 
@@ -122,7 +122,7 @@ Scraping the ratings.
 ```{r}
 ratings <- daniels %>%         # store the result in an object named ratings
   html_nodes(".row_cell") %>%  # key identifier for the ratings table
-  html_text()
+    html_text()
 ratings
 ```
 
@@ -148,7 +148,7 @@ data.frame(label,num.rating)
 ```{r}
 OH <- daniels %>%                             # store the result in an object named reviews
   html_nodes(".allHoursCTA") %>%              # key identifier for opening
-  html_text()
+    html_text()
 OH
 ```
 
@@ -160,7 +160,7 @@ brasserie <- read_html("https://www.tripadvisor.com/Restaurant_Review-g60763-d13
 
 reviews.b <- brasserie %>%                             
   html_nodes(".seeAllReviews, .overallRating") %>%
-  html_text()
+    html_text()
 
 reviews.b
 ```
@@ -168,7 +168,7 @@ reviews.b
 ```{r}
 ratings.b <- brasserie %>%      
   html_nodes(".row_cell") %>%  
-  html_text()
+    html_text()
 ratings.b
 ```
 
