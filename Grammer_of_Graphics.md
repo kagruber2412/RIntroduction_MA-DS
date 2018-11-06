@@ -88,13 +88,23 @@ plot(calories ~ rating, data = cereals, main = "Scatterplot of cereals", xlim = 
 plot(calories ~ rating, data = cereals, main = "Scatterplot of cereals", xlim=c(0,100), ylim=c(0,200), cex = 2, pch = 19)
 ```
 
-Boxplot of rating vs. manufacturer
+### Boxplot
+
+* changing the box color
+
 ```{r}
-# changing the box color
 boxplot(rating ~ mfr, data = cereals, col = "gray")
-# changing the box colors
+```
+
+* changing the box colors
+
+```{r}
 boxplot(rating ~ mfr, data = cereals, col = c("gray","dodgerblue"))
-# changing the tick labels (A: American Home Food Products; G: General Mills; K: Kelloggs; N: Nabisco; P: Post; Q: Quaker Oats; R: Ralston Purina)
+```
+
+* changing the tick labels (A: American Home Food Products; G: General Mills; K: Kelloggs; N: Nabisco; P: Post; Q: Quaker Oats; R: Ralston Purina)
+
+```{r}
 boxplot(rating ~ mfr, data = cereals, col = c("gray","dodgerblue"), names = c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"))
 ```
 
@@ -143,27 +153,31 @@ Adding a legend to the boxplot of rating vs. manufacturer
 legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"), bty="n", fill=rainbow(7))
 ```
 
-Further annotatins
+**Further annotatins: par()**
+
+* Label text perpendicular to axis
+
 ```{r}
-par(las=2) # make label text perpendicular to axis
+par(las=2) 
 boxplot(rating ~ mfr, data = cereals, col=rainbow(7), names = c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"))
 legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"), bty="n", fill=rainbow(7))
 ```
 
+* Increase the top margin (as no title is provided)
+
 ```{r}
-par(las=2, mar=c(5,4,1,2)) # increase the top margin (as not title is provided)
+par(las=2, mar=c(5,4,1,2))
 boxplot(rating ~ mfr, data = cereals, col=rainbow(7), names = c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"))
 legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"), bty="n", fill=rainbow(7))
 ```
 
-# Grammer of Graphics
+# The grammer ofgGraphics
 
 * Grammar to describe and construct statistical graphics; based on the idea of building up a graphic from multiple layers of data.
 
 * `ggplot2` is an R library for creating graphics, based on the **The Grammar of Graphics** (composed of layers, `geoms` (points, lines, regions), each with graphical `aesthetics` (color, size, shape))
 
 * Add layers (`geom_point()`, `geom_histogram()`, `geom_boxplot()`,...), scales (`scale_colour_brewer()`), faceting specifications (`facet_wrap()`) and coordinate systems (`coord_flip()`).
-
 
 ### Boxplot
 
@@ -201,14 +215,14 @@ p
 ```
 
 ```{r}
-p + scale_color_brewer(palette="Dark2")  # Change box plot line colors by groups using brewer color palettes
+p + scale_color_brewer(palette = "Dark2")  # Change box plot line colors by groups using brewer color palettes
 ```
 
 ```{r}
 p + scale_color_grey() + theme_classic() # Change box plot line colors by groups using grey scale
 ```
 
-## Ressources
+## (Useful) Ressources
 
 * http://r4ds.had.co.nz/data-visualisation.html
 * http://vita.had.co.nz/papers/layered-grammar.pdf
