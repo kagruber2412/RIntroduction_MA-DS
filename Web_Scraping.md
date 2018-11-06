@@ -78,7 +78,7 @@ ggplot(beer.table[[1]][1:10,], aes(x=Country, y=PerCapitaConsumption)) +
 
 **Example**: TripAdvisor 
 
-Scrapeing information on restaurants in New York.
+Scrapeing information on [restaurants in New York](https://www.tripadvisor.com/Restaurant_Review-g60763-d457808-Reviews-Daniel-New_York_City_New_York.html).
 
 1. Read the web page's whole html content
 ```{r}
