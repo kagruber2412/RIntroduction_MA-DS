@@ -122,19 +122,22 @@ colors()
 
 ## Annotating standard graphs
 
-Adding text to a scatterplot
+* Adding text to a scatterplot
+
 ```{r}
 plot(calories ~ rating, data = cereals, col="gray", main = "Scatterplot of cereals", xlim = c(0,100), ylim = c(0,200), cex=2, pch = 19)
 text(cereals$rating, cereals$calories, labels=cereals$name)
 ```
 
-Adding fitted lines to a scatterplot
+* Adding fitted lines to a scatterplot
+
 ```{r}
 plot(calories ~ rating, data = cereals, col = "gray", main = "Scatterplot of cereals", xlim = c(0,100), ylim = c(0,200), cex = 2, pch = 19)
 abline(lm(calories ~ rating, data = cereals))
 ```
 
-Adding text to the fitted line in a scatterplot
+* Adding text to the fitted line in a scatterplot
+
 ```{r}
 plot(calories ~ rating, data = cereals, col="gray", main = "Scatterplot of cereals", xlim = c(0,100), ylim = c(0,200), cex = 2, pch=19)
 mod <- lm(calories ~ rating, data = cereals)
@@ -142,18 +145,20 @@ abline(coef(mod))
 text(20,150,paste("y =",round(coef(mod)[1],2),"beta_0 +",round(coef(mod)[2],2),"beta_1"))
 ```
 
-Adding data points the boxplot of rating vs. manufacturer
+* Adding data points the boxplot of rating vs. manufacturer
+
 ```{r}
 boxplot(rating ~ mfr, data = cereals, col = rainbow(7), names = c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"))
 points(rating ~ mfr, data = cereals, pch = 19)
 ```
 
-Adding a legend to the boxplot of rating vs. manufacturer
+* Adding a legend to the boxplot of rating vs. manufacturer
+
 ```{r}
 legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"), bty="n", fill=rainbow(7))
 ```
 
-**Further annotatins: par()**
+### Further annotatins: par()
 
 * Label text perpendicular to axis
 
