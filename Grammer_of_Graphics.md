@@ -183,7 +183,7 @@ boxplot(rating ~ mfr, data = cereals, col=rainbow(7), names = c("A.H.F.P.","Mill
 legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"), bty="n", fill=rainbow(7))
 ```
 
-# The grammer ofgGraphics
+# The grammer of Graphics
 
 * Grammar to describe and construct statistical graphics; based on the idea of building up a graphic from multiple layers of data.
 
