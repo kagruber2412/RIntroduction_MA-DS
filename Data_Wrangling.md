@@ -239,9 +239,9 @@ data %>% unite(col, ..., sep = " ", remove = TRUE)
 
 ## Ressources
 
-* The R for Data Science section on **Spreading and gathering**: http://r4ds.had.co.nz/tidy-data.html#spreading-and-gathering
+* The R for Data Science section on [Spreading and gathering](http://r4ds.had.co.nz/tidy-data.html#spreading-and-gathering)
 
-* The Data Science With R section on **Data tidying**: http://garrettgman.github.io/tidying/
+* The Data Science With R section on [Data tidying](http://garrettgman.github.io/tidying/)
 
 
 ## Exercises
