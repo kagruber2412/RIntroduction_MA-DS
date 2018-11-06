@@ -8,6 +8,7 @@ permalink: /:categories/
 header_pages:
   - A_Primer_on_R.md
   - Base_R.md
+  - Data_import.md
   - Data_Wrangling.md
   - Grammer_of_Graphics.md
   - Web_Scraping.md
