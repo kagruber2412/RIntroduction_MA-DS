@@ -58,6 +58,7 @@ beer.table <- beer %>%
 # inspect the structure of beer.table
 str(beer.table)
 ```
+
 ```{r}
 # process only the first list entry
 head(beer.table[[1]])
@@ -105,8 +106,9 @@ reviews <- daniels %>%                             # store the result in an obje
 reviews
 ```
 
+The no of reviews included in the reviews object requires some further processing to turn the character expression into a numeric value.
+
 ```{r}
-# The no of reviews included in the reviews object requires some further processing to turn the character expression into a numeric value
 reviews[[2]]                        # the element to be processed
 strsplit(reviews[[2]], " ")         # split the character into two characters by the blank space
 strsplit(reviews[[2]], " ")[[1]]    # result is a list with one entry. We want to work on this entry
@@ -126,8 +128,9 @@ ratings <- daniels %>%         # store the result in an object named ratings
 ratings
 ```
 
+Same here, the ratings require some further processing.
+
 ```{r}
-# Same here, the ratings require some further processing to turn the character expression into a numeric value
 label <- ratings[seq(1,length(ratings),by = 3)]     # select the value labels from the vector (create a vector of indices for every third element starting from element 1 and running through the last element)
 label
 
