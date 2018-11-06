@@ -37,37 +37,53 @@ boxplot(rating ~ mfr, data = cereals)    # Boxplot of rating vs. manufacturer
 Controlling graphic parameters: colors, point symbols, line styles, labels and titles.
 
 ### Histogramm
+
  * changing bar colors and the title
+ 
 ```{r}
 hist(cereals$rating, col="gray", main = "Histogramm of cerals ratings")
 ```
+
 * changing x axis labels
+
 ```{r}
 hist(cereals$rating, col="gray", main = "Histogramm of cerals ratings", xlab = "Rating")
 ```
+
 * changing y axis scale
+
 ```{r}
 hist(cereals$rating, col="gray", main = "Histogramm of cerals ratings", xlab = "Rating", freq = FALSE)
 ```
 
 ### Scatterplot
+
 * changing plotting symbol color
+
 ```{r}
 plot(calories ~ rating, data = cereals)
 ```
+
 * adding a title
+
 ```{r}
 plot(calories ~ rating, data = cereals, main = "Scatterplot of cereals")
 ```
+
 * changing the x and y range (limits: from = ?, to = ?)
+
 ```{r}
 plot(calories ~ rating, data = cereals, main = "Scatterplot of cereals", xlim = c(0,100), ylim = c(0,200))
 ```
+
 * changing the plotting symbol size
+
 ```{r}
 plot(calories ~ rating, data = cereals, main = "Scatterplot of cereals", xlim = c(0,100), ylim = c(0,200), cex = 2)
 ```
+
 * changing the plotting symbol (plotting character)
+
 ```{r}
 plot(calories ~ rating, data = cereals, main = "Scatterplot of cereals", xlim=c(0,100), ylim=c(0,200), cex = 2, pch = 19)
 ```
@@ -87,6 +103,7 @@ boxplot(rating ~ mfr, data = cereals, col = c("gray","dodgerblue"), names = c("A
 * R uses **hexadecimal** (a base-16 number system) to represent colors (translates RGB, HSV, HCL color models to hex).
 
 * Built-in 657 named colors:
+
 ```{r}
 colors()
 ```
