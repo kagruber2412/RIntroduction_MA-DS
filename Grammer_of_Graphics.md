@@ -145,21 +145,27 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 
 * `ggplot2` is an R library for creating graphics, based on the **The Grammar of Graphics** (composed of layers, `geoms` (points, lines, regions), each with graphical `aesthetics` (color, size, shape))
 
+* Add layers (`geom_point()`, `geom_histogram()`, `geom_boxplot()`,...), scales (`scale_colour_brewer()`), faceting specifications (`facet_wrap()`) and coordinate systems (`coord_flip()`).
+
+
+### Boxplot
+
 ```{r}
 library(ggplot2)
+```
 
-p <- ggplot(cereals, aes(x=mfr, y=rating)) +  # Creating a basic box plot
-  geom_boxplot()
+* Supply the `cereal` dataset and aesthetic mapping with `aes()` to the function call `ggplot()`
+
+```{r}
+p <- ggplot(cereals, aes(x=mfr, y=rating)) + 
+  geom_boxplot()         # Box plot of rating vs. manufacturer
 p
 ```
 
-* Supply a dataset and aesthetic mapping with `aes()`
-* Add layers (like `geom_point()` or `geom_histogram()`), scales (like `scale_colour_brewer()`), faceting specifications (like `facet_wrap()`) and coordinate systems (like `coord_flip()`).
-
 ```{r}
-# Horizontal boxes (rotating)
-p + coord_flip()
+p + coord_flip()         # Horizontal boxes (rotating the boxes)
 ```
+
 ```{r}
 # Change outlier (color, shape and size)
 ggplot(cereals, aes(x=mfr, y=rating)) + 
