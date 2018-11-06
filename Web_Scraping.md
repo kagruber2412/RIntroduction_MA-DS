@@ -92,9 +92,9 @@ daniels
 * Finding the unique identifier key by using the browser plugin **https://selectorgadget.com**. 
 * Open the web page to be scraped (Chrome: click on the plugin to enable it, Safari: click the selectorgadet on the `favorites list).
 * Try to select the corresponding content area by using the mouse cursor (click to set it).
-<img src="Ressources/SelectorGadget.png"  height="250" width="600">
+![](./Ressources/SelectorGadget.png)
 * Use the class name shown at the bottom to identify the content area uniquely.
-<img src="Ressources/SelectorGadget2.png"  height="250" width="600">
+![](./Ressources/SelectorGadget2.png)
 
 Scrape the number of reviews and the overall rating.
 
@@ -152,7 +152,7 @@ OH <- daniels %>%                             # store the result in an object na
 OH
 ```
 
-**Exercise 2**: Repeat the analysis for 2 nearby restaurants.
+**Exercise 2**: Repeat the analysis for *2 nearby restaurants*.
 
 Match 65 Brasserie
 ```{r}
