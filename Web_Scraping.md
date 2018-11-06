@@ -24,7 +24,7 @@ such as dates, numbers and a huge amoung of text (thus are a mix of structured a
 * `rvest`package: Simple tool for scraping tabular data.
 * Scrapes data based on css elements in web pages.
 
-```{r, message=FALSE}
+```{r}
 ## Install rvest package
 # install.packages("rvest")
 ## Load ‘rvest’ package
