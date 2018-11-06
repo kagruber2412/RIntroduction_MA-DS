@@ -14,6 +14,11 @@ One of the main advantages of R is its strong graphic capabilities!
 
 # Standard graphs
 
+* Standard graphs in the `base` system are created by calling successive R functions to "build up" a graph in two stages:
+
+1. **Creating** of a (customized) plot
+2. **Annotating** of a plot (adding lines, points, text, legends)
+
 **Example**: Cereals
 
 ```{r}
@@ -34,7 +39,7 @@ boxplot(rating ~ mfr, data = cereals)    # Boxplot of rating vs. manufacturer
 
 ## Customizing standard graphs
 
-Controlling graphic parameters: colors, point symbols, line styles, labels and titles.
+Controlling (global) graphic parameters: colors, point symbols, line styles, labels and titles.
 
 ### Histogramm
 
@@ -64,7 +69,7 @@ hist(cereals$rating, col="gray", main = "Histogramm of cerals ratings", xlab = "
 plot(calories ~ rating, data = cereals)
 ```
 
-* adding a title
+* changing the title
 
 ```{r}
 plot(calories ~ rating, data = cereals, main = "Scatterplot of cereals")
@@ -120,7 +125,7 @@ colors()
 * Useful look-up [latex color table](http://latexcolor.com)
 
 
-## Annotating standard graphs
+## Annotating an existing standard graph
 
 * Adding text to a scatterplot
 
@@ -158,7 +163,9 @@ points(rating ~ mfr, data = cereals, pch = 19)
 legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"), bty="n", fill=rainbow(7))
 ```
 
-### Further annotatins: par()
+### Further annotatins
+
+The function `par()` can be used to specify the global graphics parameters that affect **all** plots in the active R session.
 
 * Label text perpendicular to axis
 
