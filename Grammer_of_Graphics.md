@@ -141,19 +141,20 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 
 # Grammer of Graphics
 
-`ggplot2` is an R library for creating graphics, based on the **The Grammar of Graphics** (a graphics language, composed of layers, `geoms` (points, lines, regions), each with graphical `aesthetics` (color, size, shape))
+* Grammar to describe and construct statistical graphics; based on the idea of building up a graphic from multiple layers of data.
 
-* Supply a dataset and aesthetic mapping with `aes()`
-* Add layers (like `geom_point()` or `geom_histogram()`), scales (like `scale_colour_brewer()`), faceting specifications (like `facet_wrap()`) and coordinate systems (like `coord_flip()`).
+* `ggplot2` is an R library for creating graphics, based on the **The Grammar of Graphics** (composed of layers, `geoms` (points, lines, regions), each with graphical `aesthetics` (color, size, shape))
 
 ```{r}
 library(ggplot2)
 
-# Basic box plot
-p <- ggplot(cereals, aes(x=mfr, y=rating)) + 
+p <- ggplot(cereals, aes(x=mfr, y=rating)) +  # Creating a basic box plot
   geom_boxplot()
 p
 ```
+
+* Supply a dataset and aesthetic mapping with `aes()`
+* Add layers (like `geom_point()` or `geom_histogram()`), scales (like `scale_colour_brewer()`), faceting specifications (like `facet_wrap()`) and coordinate systems (like `coord_flip()`).
 
 ```{r}
 # Horizontal boxes (rotating)
@@ -188,4 +189,5 @@ p + scale_color_grey() + theme_classic()
 ## Ressources
 
 * http://r4ds.had.co.nz/data-visualisation.html
+* http://vita.had.co.nz/papers/layered-grammar.pdf
 * R Graphics Cookbook by Winston Chang
