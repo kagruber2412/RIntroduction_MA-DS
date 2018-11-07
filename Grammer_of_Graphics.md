@@ -191,6 +191,17 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 * `ggplot2` is an R library that allows to build graphical features up in a series of semantic components:
  1. **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
  2. **geometric** objects (`geom` layers) representing the data (e.g. points, lines, regions) 
+ 
+ ---------------------------------
+`geom_histogram()` | Histogramm
+`geom_density()`   | Densityplot
+`geom_area()`      | Areaplot
+`geom_bar()`       | Barplot
+`geom_point()`     | Points
+`geom_lines()`     | Lines
+`geom_boxplot()`   | Boxplot
+`geom_violin()`    | Violinplot
+
  3. coordinate systems (`coord_flip()`)
  4. faceting specifications (`facet_wrap()`)
  
@@ -204,14 +215,6 @@ ggplot(data = <DATA>,
   <COORDINATE_FUNCTION> +
   <FACET_FUNCTION>
 ```
-
-`geom_histogram()`  Histogramm
-`geom_density()` Densityplot
-`geom_area()` Areaplot
-`geom_bar()`  Barplot
-`geom_point()` Points
-`geom_lines()` Lines
-`geom_boxplot()`  Boxplot
 
 
 scales (`scale_colour_brewer()`)
