@@ -121,7 +121,7 @@ boxplot(rating ~ mfr, data = cereals, col = c("gray","dodgerblue"), names = c("A
 colors()
 ```
 
-* R uses **hexadecimal** (a base-16 number system) to represent colors (translates RGB, HSV, HCL color models to hex)
+* R uses **hexadecimal** (a base-16 number system) to represent colors (hex model also translates to RGB, HSV, HCL color models), see also:
    + [latexcolor.com](http://latexcolor.com)
    + [ColorBrewer.org](http://colorbrewer2.org)
 
