@@ -122,7 +122,9 @@ boxplot(rating ~ mfr, data = cereals, col = c("gray","dodgerblue"), names = c("A
 ```{r}
 colors()
 ```
-* Useful look-up [latex color table](http://latexcolor.com)
+* Useful look-up: [latexcolor.com](http://latexcolor.com).
+
+* Another useful look-up: [ColorBrewer.org](http://colorbrewer2.org).
 
 
 ## Annotating an existing standard graph
