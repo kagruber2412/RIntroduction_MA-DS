@@ -192,15 +192,15 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
  1. **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
  2. **geometric** objects representing the data
  
- ---------------------------------
-`geom_histogram()` | Histogramm
-`geom_density()`   | Densityplot
-`geom_area()`      | Areaplot
-`geom_bar()`       | Barplot
-`geom_point()`     | Points
-`geom_lines()`     | Lines
-`geom_boxplot()`   | Boxplot
-`geom_violin()`    | Violinplot
+|-------------------|-------------|
+|`geom_histogram()` | Histogramm  |
+|`geom_density()`   | Densityplot |
+|`geom_area()`      | Areaplot    |
+|`geom_bar()`       | Barplot     |
+|`geom_point()`     | Points      |
+|`geom_lines()`     | Lines       |
+|`geom_boxplot()`   | Boxplot     |
+|`geom_violin()`    | Violinplot  |
 
  3. **coordinate systems** 
  `coord_flip()`
