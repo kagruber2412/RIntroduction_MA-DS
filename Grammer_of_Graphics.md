@@ -122,8 +122,8 @@ colors()
 ```
 
 * R uses **hexadecimal** (a base-16 number system) to represent colors (translates RGB, HSV, HCL color models to hex)
-+ [latexcolor.com](http://latexcolor.com)
-+ [ColorBrewer.org](http://colorbrewer2.org)
+   + [latexcolor.com](http://latexcolor.com)
+   + [ColorBrewer.org](http://colorbrewer2.org)
 
 
 ## Annotating an existing standard graph
@@ -189,11 +189,10 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 * Grammar to describe and construct statistical graphics; based on the idea of building up a graphic from multiple layers of data.
 
 * `ggplot2` is an R library that allows to build graphical features up in a series of semantic components:
-
- + **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
- + **geometric** objects (`geom` layers) representing the data (e.g. points, lines, regions) 
- + coordinate systems (`coord_flip()`)
- + faceting specifications (`facet_wrap()`)
+ 1. **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
+ 2. **geometric** objects (`geom` layers) representing the data (e.g. points, lines, regions) 
+ 3. coordinate systems (`coord_flip()`)
+ 4. faceting specifications (`facet_wrap()`)
  
 ```
 ggplot(data = <DATA>,
