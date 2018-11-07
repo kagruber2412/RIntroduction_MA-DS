@@ -185,13 +185,40 @@ boxplot(rating ~ mfr, data = cereals, col=rainbow(7), names = c("A.H.F.P.","Mill
 legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker", "Purina"), bty="n", fill=rainbow(7))
 ```
 
-# The grammer of Graphics
+# The Grammer of Graphics
 
 * Grammar to describe and construct statistical graphics; based on the idea of building up a graphic from multiple layers of data.
 
-* `ggplot2` is an R library for creating graphics, based on the **The Grammar of Graphics** (composed of layers, `geoms` (points, lines, regions), each with graphical `aesthetics` (color, size, shape))
+* `ggplot2` is an R library that allows to build graphical features up in a series of semantic components:
 
-* Add layers (`geom_point()`, `geom_histogram()`, `geom_boxplot()`,...), scales (`scale_colour_brewer()`), faceting specifications (`facet_wrap()`) and coordinate systems (`coord_flip()`).
+ - **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
+ - **geometric** objects (`geom` layers) representing the data (e.g. points, lines, regions) 
+ - coordinate systems (`coord_flip()`)
+ - faceting specifications (`facet_wrap()`)
+ 
+```
+ggplot(data = <DATA>,
+       mapping = aes(<MAPPING>)) + 
+  <GEOM_FUNCTION>(
+     stat = <STAT>, 
+     position = <POSITION>
+  ) +
+  <COORDINATE_FUNCTION> +
+  <FACET_FUNCTION>
+```
+
+`geom_histogram()`  Histogramm
+`geom_density()` Densityplot
+`geom_area()` Areaplot
+`geom_bar()`  Barplot
+`geom_point()` Points
+`geom_lines()` Lines
+`geom_boxplot()`  Boxplot
+
+
+scales (`scale_colour_brewer()`)
+
+
 
 ### Boxplot
 
