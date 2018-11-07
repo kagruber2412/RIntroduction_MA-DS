@@ -115,16 +115,15 @@ boxplot(rating ~ mfr, data = cereals, col = c("gray","dodgerblue"), names = c("A
 
 ### Colors in R
 
-* R uses **hexadecimal** (a base-16 number system) to represent colors (translates RGB, HSV, HCL color models to hex).
-
 * Built-in 657 named colors:
 
 ```{r}
 colors()
 ```
-* Useful look-up: [latexcolor.com](http://latexcolor.com).
 
-* Another useful look-up: [ColorBrewer.org](http://colorbrewer2.org).
+* R uses **hexadecimal** (a base-16 number system) to represent colors (translates RGB, HSV, HCL color models to hex)
++ [latexcolor.com](http://latexcolor.com)
++ [ColorBrewer.org](http://colorbrewer2.org)
 
 
 ## Annotating an existing standard graph
@@ -191,10 +190,10 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 
 * `ggplot2` is an R library that allows to build graphical features up in a series of semantic components:
 
- - **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
- - **geometric** objects (`geom` layers) representing the data (e.g. points, lines, regions) 
- - coordinate systems (`coord_flip()`)
- - faceting specifications (`facet_wrap()`)
+ + **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
+ + **geometric** objects (`geom` layers) representing the data (e.g. points, lines, regions) 
+ + coordinate systems (`coord_flip()`)
+ + faceting specifications (`facet_wrap()`)
  
 ```
 ggplot(data = <DATA>,
