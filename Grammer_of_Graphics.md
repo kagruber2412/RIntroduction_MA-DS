@@ -186,11 +186,11 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 
 # The Grammer of Graphics
 
-* Grammar to describe and construct statistical graphics; based on the idea of building up a graphic from multiple layers of data.
+* Grammar to describe and construct statistical graphics; based on the idea of building up a graphic by semantic components.
 
-* `ggplot2` is an R library that allows to build graphical features up in a series of semantic components:
+* `ggplot2` is an R library that allows to build graphical features up in a series of layers:
  1. **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
- 2. **geometric** objects (`geom` layers) representing the data (e.g. points, lines, regions) 
+ 2. **geometric** objects representing the data
  
  ---------------------------------
 `geom_histogram()` | Histogramm
@@ -202,8 +202,19 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 `geom_boxplot()`   | Boxplot
 `geom_violin()`    | Violinplot
 
- 3. coordinate systems (`coord_flip()`)
- 4. faceting specifications (`facet_wrap()`)
+ 3. **coordinate systems** 
+ `coord_flip()`
+ 
+ 4. **faceting** the data (splitting by some predefined criteria to display sup-graphs) 
+ 
+ `facet_wrap()`
+ `facet_grid()`
+ 
+ 5. **themes** to control non-data elements
+ `theme_bw()` white background with grid lines
+ `theme_grey()` grey background (default)
+ `theme_classic()` white background (no grid lines)
+ `theme_minimal()` minimal theme
  
 ```
 ggplot(data = <DATA>,
