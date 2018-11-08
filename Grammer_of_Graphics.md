@@ -194,7 +194,7 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
  
 | Geometric        | Mapping     |
 |------------------|-------------|
-| geom_histogram() | Histogramm  |
+| `geom_histogram()` | Histogramm  |
 | geom_density()   | Densityplot |
 | geom_area()      | Areaplot    |
 | geom_bar()       | Barplot     |
