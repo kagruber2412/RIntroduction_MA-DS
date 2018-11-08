@@ -212,10 +212,15 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
  `facet_grid()`
  
  5. **themes** to control non-data elements
- `theme_bw()` white background with grid lines
- `theme_grey()` grey background (default)
- `theme_classic()` white background (no grid lines)
- `theme_minimal()` minimal theme
+ 
+| Themes           | Description                                        |
+|------------------|----------------------------------------------------|
+| theme_bw()       | white background with grid lines                   |
+| theme_grey()     | grey background and white grid lines (default)     |
+| theme_classic()  | white background and no grid lines                 |
+| theme_minimal()  | minimal theme with no background annotations       |
+| theme_linedraw() | black lines of various widths on white backgrounds |
+| theme_light()    | light grey lines and axes                          |
  
 ```
 ggplot(data = <DATA>,
