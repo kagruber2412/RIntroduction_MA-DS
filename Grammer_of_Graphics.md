@@ -222,20 +222,17 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 | theme_linedraw() | black lines of various widths on white backgrounds |
 | theme_light()    | light grey lines and axes                          |
  
-```
-ggplot(data = <DATA>,
-       mapping = aes(<MAPPING>)) + 
-  <GEOM_FUNCTION>(
-     stat = <STAT>, 
-     position = <POSITION>
-  ) +
-  <COORDINATE_FUNCTION> +
-  <FACET_FUNCTION>
-```
+* **scales** map values in the data space to values in the aesthetic space (color, size, shape, ...) and are reported on the plot using axes and legends.
 
-
-scales (`scale_colour_brewer()`)
-
+| Scale                                      | Description                                  |
+|--------------------------------------------|----------------------------------------------|
+| scale_shape_discrete()                     | shape scale with discrete values             |
+| scale_x_log10(), scale_y_log10()           | Log-transform x or y axis                    |
+| scale_x_continuous(), scale_y_continuous() | minimal theme with no background annotations |
+| scale_colour_discrete()                    | color scale with discrete value              |
+| scale_colour_grey()                        | grey colors used in the plot                 |
+| scale_color_brewer(palette)                | library(RColorBrewer) display.brewer.all()   |
+| scale_color_manual(values)                 | specify colors to be used manually           |
 
 
 ### Boxplot
