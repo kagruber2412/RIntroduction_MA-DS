@@ -228,12 +228,21 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 |--------------------------------------------|----------------------------------------------|
 | scale_shape_discrete()                     | shape scale with discrete values             |
 | scale_x_log10(), scale_y_log10()           | Log-transform x or y axis                    |
+| scale_x_sqrt(), scale_y_sqrt()             | Square root transformation of x or y axis    |
+| scale_trans(x, y)                          | Possible values: "log2", "log10", "sqrt",... |
 | scale_x_continuous(), scale_y_continuous() | minimal theme with no background annotations |
+| scale_x_reverse(), scale_y_reverse()       | reverse x or y coordinates                   |
 | scale_colour_discrete()                    | color scale with discrete value              |
 | scale_colour_grey()                        | grey colors used in the plot                 |
 | scale_color_brewer(palette)                | library(RColorBrewer) display.brewer.all()   |
 | scale_color_manual(values)                 | specify colors to be used manually           |
 
+Usage:
+  + *name*: axis labels
+  + *breaks*: to control the breaks in the guide (axis ticks, grid lines).
+  + *labels*: labels of axis tick marks. 
+  + *limits*: a numeric vector specifying x or y axis limits (min, max)
+  + *trans*: coordinate transformation by either "log2", "log10" or "sqrt"
 
 ### Boxplot
 
