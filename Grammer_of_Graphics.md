@@ -191,80 +191,10 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 * `ggplot2` is an R library that allows to build graphical features up in a series of layers:
  1. **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
  2. **geometric** objects representing the data
- 
-| Geometric        | Mapping     |
-|------------------|-------------|
-| `geom_histogram()` | Histogramm  |
-| geom_density()   | Densityplot |
-| geom_area()      | Areaplot    |
-| geom_bar()       | Barplot     |
-| geom_point()     | Points      |
-| geom_lines()     | Lines       |
-| geom_boxplot()   | Boxplot     |
-| geom_violin()    | Violinplot  |
-
  3. **coordinate systems** 
- 
-| Coordinate system | Description |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------|
-| coord_cartesian() | (default) cartesian coordinate system (x horizontal from left to right, y vertical from bottom to top) |
-| coord_flip() | flipped cartesian coordinate system (x vertical from bottom to top, y horizontal from left to right)f |
-| coord_trans() | transformations of the x and y variable (transformations only pertain to the depicted – not the actual – scale of the data.) |
-| coord_fixed() | Specifying the “aspect ratio” of the axes of the length of a y unit relative to the length of a x unit |
-| coord_equal() |  |
-| coord_polar() | polar coordinate system; the x (or y) scale is mapped to the angle (theta) |
-| coord_map() | various map projections |
-
- Arguments:
- *  the displayed section of the data can be specified by defining the maximal value depicted on the x (xlim =) and y (ylim =) axis.
- 
- 4. **faceting** the data; splitting by some predefined criteria to display sup-graphs by `facet_wrap()` or `facet_grid()`
- 
- Arguments:
-* facets: A set of variables or expressions quoted by vars() and defining faceting groups on the rows or columns dimension. The variables can be named (the names are passed to labeller).
-* nrow, ncol: Number of rows and columns.
- * *rows, cols:* A set of variables or expressions quoted by vars() and defining faceting groups on the rows or columns dimension. The variables can be named (the names are passed to labeller).
- * scales: Are scales shared across all facets (the default, "fixed"), or do they vary across rows ("free_x"), columns ("free_y"), or both rows and columns ("free")?
- * *space:* If "fixed", the default, all panels have the same size. If "free_y" their height will be proportional to the length of the y scale; if "free_x" their width will be proportional to the length of the x scale; or if "free" both height and width will vary. This setting has no effect unless the appropriate scales also vary.
- 
- 5. **themes** to control non-data elements
- 
-| Themes           | Description                                        |
-|------------------|----------------------------------------------------|
-| theme_bw()       | white background with grid lines                   |
-| theme_grey()     | grey background and white grid lines (default)     |
-| theme_classic()  | white background and no grid lines                 |
-| theme_minimal()  | minimal theme with no background annotations       |
-| theme_linedraw() | black lines of various widths on white backgrounds |
-| theme_light()    | light grey lines and axes                          |
-
-Arguments:
-* base_size: base font size (the default value is 11)
-* base_family: base font family (a huge number of fonts can be made available via the `extrafont` add-on package).
-* base_line_size: base size for line elements (default is base_size/22)
-* base_rect_size: base size for rect elements (default is base_size/22)
-
-6. **scales** map values in the data space to values in the aesthetic space (color, size, labels, ...) and are reported on the plot using axes and legends.
-
-| Scale                                      | Description                                  |
-|--------------------------------------------|----------------------------------------------|
-| scale_shape_discrete()                     | shape scale with discrete values             |
-| scale_x_log10(), scale_y_log10()           | Log-transform x or y axis                    |
-| scale_x_sqrt(), scale_y_sqrt()             | Square root transformation of x or y axis    |
-| scale_trans(x, y)                          | Possible values: "log2", "log10", "sqrt",... |
-| scale_x_continuous(), scale_y_continuous() | minimal theme with no background annotations |
-| scale_x_reverse(), scale_y_reverse()       | reverse x or y coordinates                   |
-| scale_colour_discrete()                    | color scale with discrete value              |
-| scale_colour_grey()                        | grey colors used in the plot                 |
-| scale_color_brewer(palette)                | library(RColorBrewer) display.brewer.all()   |
-| scale_color_manual(values)                 | specify colors to be used manually           |
-
-Arguments:                                                                                 
-  + *name*: axis labels
-  + *breaks*: to control the breaks in the guide (axis ticks, grid lines).
-  + *labels*: labels of axis tick marks. 
-  + *limits*: a numeric vector specifying x or y axis limits (min, max)
-  + *trans*: coordinate transformation by either "log2", "log10" or "sqrt"
+ 4. **faceting** the data; splitting by some predefined criteria to display sup-graphs by `facet_wrap()` or `facet_grid()`.
+ 5. **themes** to control non-data elements.
+ 6. **scales** map values in the data space to values in the aesthetic space (color, size, labels, ...) and are reported on the plot using axes and legends.
 
 ### Boxplot
 
