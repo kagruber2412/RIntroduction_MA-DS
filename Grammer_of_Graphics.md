@@ -204,12 +204,28 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 | geom_violin()    | Violinplot  |
 
  3. **coordinate systems** 
- `coord_flip()`
  
- 4. **faceting** the data (splitting by some predefined criteria to display sup-graphs) 
+| Coordinate system | Description |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------|
+| coord_cartesian() | (default) cartesian coordinate system (x horizontal from left to right, y vertical from bottom to top) |
+| coord_flip() | flipped cartesian coordinate system (x vertical from bottom to top, y horizontal from left to right)f |
+| coord_trans() | transformations of the x and y variable (transformations only pertain to the depicted – not the actual – scale of the data.) |
+| coord_fixed() | Specifying the “aspect ratio” of the axes of the length of a y unit relative to the length of a x unit |
+| coord_equal() |  |
+| coord_polar() | polar coordinate system; the x (or y) scale is mapped to the angle (theta) |
+| coord_map() | various map projections |
+
+ Arguments:
+ *  the displayed section of the data can be specified by defining the maximal value depicted on the x (xlim =) and y (ylim =) axis.
  
- `facet_wrap()`
- `facet_grid()`
+ 4. **faceting** the data; splitting by some predefined criteria to display sup-graphs by `facet_wrap()` or `facet_grid()`
+ 
+ Arguments:
+* facets: A set of variables or expressions quoted by vars() and defining faceting groups on the rows or columns dimension. The variables can be named (the names are passed to labeller).
+* nrow, ncol: Number of rows and columns.
+ * *rows, cols:* A set of variables or expressions quoted by vars() and defining faceting groups on the rows or columns dimension. The variables can be named (the names are passed to labeller).
+ * scales: Are scales shared across all facets (the default, "fixed"), or do they vary across rows ("free_x"), columns ("free_y"), or both rows and columns ("free")?
+ * *space:* If "fixed", the default, all panels have the same size. If "free_y" their height will be proportional to the length of the y scale; if "free_x" their width will be proportional to the length of the x scale; or if "free" both height and width will vary. This setting has no effect unless the appropriate scales also vary.
  
  5. **themes** to control non-data elements
  
@@ -224,7 +240,7 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 
 Arguments:
 * base_size: base font size (the default value is 11)
-* base_family: base font family (a huge number of fonts can be made available via the `extrafonts` add-on package).
+* base_family: base font family (a huge number of fonts can be made available via the `extrafont` add-on package).
 * base_line_size: base size for line elements (default is base_size/22)
 * base_rect_size: base size for rect elements (default is base_size/22)
 
