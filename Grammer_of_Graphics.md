@@ -221,8 +221,14 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 | theme_minimal()  | minimal theme with no background annotations       |
 | theme_linedraw() | black lines of various widths on white backgrounds |
 | theme_light()    | light grey lines and axes                          |
- 
-* **scales** map values in the data space to values in the aesthetic space (color, size, shape, ...) and are reported on the plot using axes and legends.
+
+Arguments:
+* base_size: base font size (the default value is 11)
+* base_family: base font family (a huge number of fonts can be made available via the `extrafonts` add-on package).
+* base_line_size: base size for line elements (default is base_size/22)
+* base_rect_size: base size for rect elements (default is base_size/22)
+
+6. **scales** map values in the data space to values in the aesthetic space (color, size, labels, ...) and are reported on the plot using axes and legends.
 
 | Scale                                      | Description                                  |
 |--------------------------------------------|----------------------------------------------|
@@ -236,7 +242,8 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 | scale_colour_grey()                        | grey colors used in the plot                 |
 | scale_color_brewer(palette)                | library(RColorBrewer) display.brewer.all()   |
 | scale_color_manual(values)                 | specify colors to be used manually           |
-|Arguments:                                                                                 |
+
+Arguments:                                                                                 
   + *name*: axis labels
   + *breaks*: to control the breaks in the guide (axis ticks, grid lines).
   + *labels*: labels of axis tick marks. 
