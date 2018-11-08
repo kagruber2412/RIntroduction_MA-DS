@@ -236,8 +236,7 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 | scale_colour_grey()                        | grey colors used in the plot                 |
 | scale_color_brewer(palette)                | library(RColorBrewer) display.brewer.all()   |
 | scale_color_manual(values)                 | specify colors to be used manually           |
-
-Usage:
+|Arguments:                                                                                 |
   + *name*: axis labels
   + *breaks*: to control the breaks in the guide (axis ticks, grid lines).
   + *labels*: labels of axis tick marks. 
