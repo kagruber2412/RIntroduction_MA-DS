@@ -189,9 +189,9 @@ legend("topleft", legend=c("A.H.F.P.","Mills","Kellogs","Nabisco","Post","Quaker
 * Grammar to describe and construct statistical graphics; based on the idea of building up a graphic by semantic components.
 
 * `ggplot2` is an R library that allows to build graphical features up in a series of layers:
- 1. **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape)
- 2. **geometric** objects representing the data
- 3. **coordinate systems** 
+ 1. **aesthetic** mapping of the data (`aes()`), defines how variables are connected to visual properties or outputs (e.g. color, size, shape).
+ 2. **geometric** objects representing the data.
+ 3. **coordinate systems**.
  4. **faceting** the data; splitting by some predefined criteria to display sup-graphs by `facet_wrap()` or `facet_grid()`.
  5. **themes** to control non-data elements.
  6. **scales** map values in the data space to values in the aesthetic space (color, size, labels, ...) and are reported on the plot using axes and legends.
